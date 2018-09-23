@@ -44,6 +44,7 @@ namespace MagisterkApp.API
                 //fix for Newtonsoft.Json.JsonSerializationException: Self referencing loop detected for property 'user'
             services.AddCors();
             services.AddAutoMapper();
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddTransient<Seed>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IPhotoRepository, PhotoRepository>();
