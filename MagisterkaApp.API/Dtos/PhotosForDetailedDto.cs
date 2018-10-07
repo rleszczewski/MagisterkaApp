@@ -13,5 +13,7 @@ namespace MagisterkaApp.API.Dtos
         public DateTime DateAdded { get; set; }
 
         public bool IsMain { get; set; }
+
+        public string Confidence {get; set;}
     }
 }

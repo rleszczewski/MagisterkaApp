@@ -55,7 +55,8 @@ export class PhotoEditorComponent implements OnInit {
           url: res.url,
           dateAdded: res.dateAdded,
           description:  res.description,
-          isMain: res.isMain
+          isMain: res.isMain,
+          confidence: res.confidence
         };
         this.photos.push(photo);
 
@@ -69,7 +70,7 @@ export class PhotoEditorComponent implements OnInit {
   }
 
   setMainPhoto(photo: Photo) {
-    this.userService.setMainPhoto(this.authservice.decodedToken.nameid, photo.id).subscribe(() =>{
+    this.userService.setMainPhoto(this.authservice.decodedToken.nameid, photo.id).subscribe(() => {
       this.currentMain = this.photos.filter(p => p.isMain === true)[0];
       this.currentMain.isMain = false;
       photo.isMain = true;

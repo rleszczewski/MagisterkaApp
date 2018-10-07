@@ -10,6 +10,10 @@ namespace MagisterkaApp.API.Dtos
         public string Description { get; set; }
         public DateTime DateAdded { get; set; }
         public string PublicId { get; set; }
+        public Boolean IsFirstPhoto {get; set; }
+
+        public string Confidence {get; set;}
+
 
         public PhotoForCreationDto()
         {

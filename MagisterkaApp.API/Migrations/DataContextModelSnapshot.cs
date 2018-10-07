@@ -21,9 +21,13 @@ namespace MagisterkApp.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Confidence");
+
                     b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Description");
+
+                    b.Property<bool>("IsFirstPhoto");
 
                     b.Property<bool>("IsMain");
 

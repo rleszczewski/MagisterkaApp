@@ -5,6 +5,8 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { BsDatepickerConfig } from 'ngx-bootstrap';
 import { User } from '../_models/user';
 import { Router } from '@angular/router';
+import {WebcamImage, WebcamInitError, WebcamUtil} from 'ngx-webcam';
+import { Subject, Observable } from 'rxjs';
 
 
 @Component({
@@ -16,6 +18,7 @@ export class RegisterComponent implements OnInit {
   // 997 we got acces to valuesFromHome inside component
   // which got all values that is passed out from home component
  // @Input() valuesFromHome: any;
+
 
   @Output() cancelRegister = new EventEmitter();
 
@@ -31,6 +34,7 @@ export class RegisterComponent implements OnInit {
       containerClass: 'theme-red'
     };
     this.createRegisterForm();
+
   }
 
   createRegisterForm() {
@@ -70,4 +74,6 @@ export class RegisterComponent implements OnInit {
   cancel() {
     this.cancelRegister.emit(false);
  }
+ //
+
 }

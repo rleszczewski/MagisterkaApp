@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MagisterkApp.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180920210305_AddedPublicId")]
-    partial class AddedPublicId
+    [Migration("20181006192143_FinalMigrations")]
+    partial class FinalMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,13 @@ namespace MagisterkApp.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Confidence");
+
                     b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Description");
+
+                    b.Property<bool>("IsFirstPhoto");
 
                     b.Property<bool>("IsMain");
 

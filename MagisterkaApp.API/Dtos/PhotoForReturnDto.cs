@@ -15,5 +15,7 @@ namespace MagisterkaApp.API.Dtos
         public bool IsMain { get; set; }
 
         public string PublicId {get; set; }
+
+        public string Confidence {get; set;}
     }
 }

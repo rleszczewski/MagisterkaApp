@@ -33,7 +33,7 @@ export class MemberEditComponent implements OnInit {
   }
 
   updateUser() {
-    this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(next =>{
+    this.userService.updateUser(this.authService.decodedToken.nameid, this.user).subscribe(next => {
       this.alerfity.success('Profile updated');
       this.editForm.reset(this.user);
     }, error => {
